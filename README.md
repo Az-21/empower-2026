@@ -2,6 +2,15 @@
 
 Developer setup and workflow for the weekly Python exercises in this repo.
 
+## Clone the Repository
+
+From your terminal, run:
+
+```bash
+git clone https://github.com/Az-21/empower-2026.git
+cd empower-2026
+```
+
 ## Project Layout
 
 ```text
