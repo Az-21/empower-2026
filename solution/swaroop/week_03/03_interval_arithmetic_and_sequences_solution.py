@@ -39,18 +39,18 @@ def upper_bound(interval_value: Interval) -> float:
 
 def add_interval(first_interval: Interval, second_interval: Interval) -> Interval:
   return make_interval(
-      lower_bound(first_interval) + lower_bound(second_interval),
-      upper_bound(first_interval) + upper_bound(second_interval),
+    lower_bound(first_interval) + lower_bound(second_interval),
+    upper_bound(first_interval) + upper_bound(second_interval),
   )
 
 
 def multiply_interval(first_interval: Interval, second_interval: Interval) -> Interval:
   """Result bounds are the min/max over all four combinations of the input bounds (needed because bounds may be negative)."""
   candidates = [
-      lower_bound(first_interval) * lower_bound(second_interval),
-      lower_bound(first_interval) * upper_bound(second_interval),
-      upper_bound(first_interval) * lower_bound(second_interval),
-      upper_bound(first_interval) * upper_bound(second_interval),
+    lower_bound(first_interval) * lower_bound(second_interval),
+    lower_bound(first_interval) * upper_bound(second_interval),
+    upper_bound(first_interval) * lower_bound(second_interval),
+    upper_bound(first_interval) * upper_bound(second_interval),
   ]
   return make_interval(min(candidates), max(candidates))
 
